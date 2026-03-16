@@ -1,0 +1,14 @@
+FROM oven/bun:1.3.10-slim
+
+WORKDIR /app
+
+COPY package.json ./
+
+RUN bun install --production
+
+# https://github.com/oven-sh/bun/issues/9911
+RUN sed -i \
+'s;require("./utilsBundleImpl").ws;("Bun" in globalThis) ? require("ws") : &;' \
+node_modules/playwright-core/lib/utilsBundle.js
+
+CMD ["bun"]
