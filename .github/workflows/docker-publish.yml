@@ -13,11 +13,11 @@ jobs:
       contents: read
       packages: write
     env:
-      REGISTRY: 'ghcr.io'
-      IMAGE: "${{ env.REGISTRY }}/${{ github.repository_owner }}/webauto"
+      REGISTRY: ghcr.io
     strategy:
       matrix:
-        tag: [ node, bun ]
+        runtime: [ node, bun ]
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,18 +36,18 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.IMAGE }}
+          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/webauto
           tags: |
-            type=semver,pattern={{version}}-${{ matrix.tag }}
+            type=semver,pattern={{version}}-${{ matrix.runtime }}
             type=semver,pattern={{version}}
-            type=raw,value=${{ matrix.tag }},enable={{is_default_branch}}
-            type=raw,value=latest,enable=${{ {{is_default_branch}} && matrix.tag == 'node' }}
+            type=raw,value=${{ matrix.runtime }},enable={{is_default_branch}}
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' && matrix.runtime == 'node' }}
 
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile.${{ matrix.tag }}
+          file: ./Dockerfile.${{ matrix.runtime }}
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha
           cache-to: type=gha,mode=max
