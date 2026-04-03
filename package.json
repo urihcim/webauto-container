@@ -1,11 +1,11 @@
 {
   "name": "webauto",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web automation",
   "private": true,
   "type": "module",
   "dependencies": {
-    "otplib": "^13.3.0",
-    "playwright-core": "^1.58.2"
+    "otplib": "^13.4.0",
+    "playwright-core": "^1.59.1"
   }
 }
