@@ -30,6 +30,16 @@ docker pull ghcr.io/urihcim/webauto:<TAG>
 | `[version]-node` | Node.js | Versioned Node.js environment (e.g., `1.0.0-node`) |
 | `[version]-bun` | Bun | Versioned Bun environment (e.g., `1.0.0-bun`) |
 
+## Releases
+
+Releases are automated with [release-please](https://github.com/googleapis/release-please).
+
+1. Commits on `main` follow [Conventional Commits](https://www.conventionalcommits.org/). Dependabot uses `fix(deps):` for npm/Docker updates and `chore(deps):` for GitHub Actions updates.
+2. release-please keeps a release PR open that bumps `package.json` and updates `CHANGELOG.md`. `fix` bumps the patch version, and `feat` or a breaking change bumps the minor version while the version is `0.x`.
+3. Merging the release PR creates the `v*` tag and GitHub Release, and dispatches the image build for that tag.
+
+`chore` commits (including GitHub Actions updates) do not trigger a release on their own.
+
 ## Usage
 
 Prepare your script on the host machine and mount it to the container's `/app` directory to execute.
