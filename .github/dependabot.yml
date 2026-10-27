@@ -2,6 +2,9 @@ version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
     schedule:
       interval: "weekly"
     cooldown:
@@ -13,6 +16,9 @@ updates:
 
   - package-ecosystem: "docker"
     directory: "/"
+    commit-message:
+      prefix: "fix"
+      include: "scope"
     schedule:
       interval: "weekly"
     cooldown:
@@ -20,6 +26,9 @@ updates:
 
   - package-ecosystem: "npm"
     directory: "/"
+    commit-message:
+      prefix: "fix"
+      include: "scope"
     schedule:
       interval: "weekly"
     versioning-strategy: "increase"
