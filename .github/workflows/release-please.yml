@@ -4,6 +4,12 @@ on:
   push:
     branches: [ main ]
 
+# Serialize runs so that merging several PRs at once does not race on
+# creating the same release PR.
+concurrency:
+  group: release-please
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pull-requests: write
