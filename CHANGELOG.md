@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0](https://github.com/urihcim/webauto-container/compare/v0.4.1...v1.0.0) (2026-10-29)
+
+
+### Miscellaneous
+
+* release 1.0.0 ([8535431](https://github.com/urihcim/webauto-container/commit/8535431a6fde77053b56a687ac98b2ec8acab7c6))
+
 ## [0.4.1](https://github.com/urihcim/webauto-container/compare/v0.4.0...v0.4.1) (2026-10-27)
 
 
