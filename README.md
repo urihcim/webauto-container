@@ -35,7 +35,7 @@ docker pull ghcr.io/urihcim/webauto:<TAG>
 Releases are automated with [release-please](https://github.com/googleapis/release-please).
 
 1. Commits on `main` follow [Conventional Commits](https://www.conventionalcommits.org/). Dependabot uses `fix(deps):` for npm/Docker updates and `chore(deps):` for GitHub Actions updates.
-2. release-please keeps a release PR open that bumps `package.json` and updates `CHANGELOG.md`. `fix` bumps the patch version, and `feat` or a breaking change bumps the minor version while the version is `0.x`.
+2. release-please keeps a release PR open that bumps `package.json` and updates `CHANGELOG.md`. `fix` bumps the patch version, `feat` bumps the minor version, and a breaking change bumps the major version.
 3. Merging the release PR creates the `v*` tag and GitHub Release, and dispatches the image build for that tag.
 
 `chore` commits (including GitHub Actions updates) do not trigger a release on their own.
