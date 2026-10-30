@@ -1,6 +1,5 @@
 {
   "name": "webauto",
-  "version": "1.0.0",
   "description": "Web automation",
   "private": true,
   "type": "module",
