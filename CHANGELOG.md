@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/urihcim/webauto-container/compare/v1.0.0...v1.0.1) (2026-11-09)
+
+
+### Bug Fixes
+
+* **deps:** bump otplib from 13.5.0 to 13.6.0 ([#54](https://github.com/urihcim/webauto-container/issues/54)) ([8c5313d](https://github.com/urihcim/webauto-container/commit/8c5313dd98e38541dd45f8c092da8ce27f0edeb0))
+
 ## [1.0.0](https://github.com/urihcim/webauto-container/compare/v0.4.1...v1.0.0) (2026-10-29)
 
 
