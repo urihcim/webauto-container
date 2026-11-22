@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/urihcim/webauto-container/compare/v1.0.2...v1.0.3) (2026-11-22)
+
+
+### Bug Fixes
+
+* **deps:** bump node from 26.13.0-slim to 26.13.1-slim ([#61](https://github.com/urihcim/webauto-container/issues/61)) ([9edc624](https://github.com/urihcim/webauto-container/commit/9edc624be4801ffaa5f2b796614e8ec644512dd6))
+* **deps:** bump playwright-core from 1.65.0 to 1.65.1 ([#62](https://github.com/urihcim/webauto-container/issues/62)) ([10c6ff8](https://github.com/urihcim/webauto-container/commit/10c6ff879883c99cfa08345b52ec365429d6ea5e))
+
 ## [1.0.2](https://github.com/urihcim/webauto-container/compare/v1.0.1...v1.0.2) (2026-11-16)
 
 
